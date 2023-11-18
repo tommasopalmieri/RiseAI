@@ -35,6 +35,8 @@
 **/
 // Files were changed even if name is the same.
 
+// git repo: https://github.com/tommasopalmieri/RiseAI
+
 #define PLATFORM_COUNT 15
 
 #define ENEMY_COUNT 3
@@ -431,7 +433,7 @@ void process_input(){
                     g_game_state.player->m_is_jumping = true;
                     Mix_PlayChannel(
                         NEXT_CHNL,       // using the first channel that is not currently in use...
-                        g_bouncing_sfx,  // ...play this chunk of audio...
+                        g_game_state.jump_sfx,  // ...play this chunk of audio...
                         PLAY_ONCE        // ...once.
                     );
                 }
